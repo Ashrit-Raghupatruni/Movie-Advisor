@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Advisor - Your Personal Movie Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🎬 Movie Advisor</h1>
+                <p>Discover Your Next Favorite Movie</p>
+            </div>
+        </header>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="section">
+            <div class="login-card">
+                <h2>Welcome to Movie Advisor</h2>
+                <p class="subtitle">Enter your name to get started</p>
+                <div class="input-group">
+                    <input type="text" id="userNameInput" placeholder="Enter your name" autocomplete="off">
+                    <button id="loginBtn" class="btn btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App Section -->
+        <div id="appSection" class="section hidden">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="user-greeting">
+                    <h2>Welcome back, <span id="userNameDisplay"></span>!</h2>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="search">🔍 Search & Recommend</button>
+                <button class="tab-btn" data-tab="history">📚 My History</button>
+            </div>
+
+            <!-- Search Tab -->
+            <div id="searchTab" class="tab-content active">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="movieSearchInput" placeholder="Search for a movie..." autocomplete="off">
+                        <button id="searchBtn" class="btn btn-primary">Search</button>
+                    </div>
+                    
+                    <!-- Movie Suggestions (Autocomplete) -->
+                    <div id="suggestions" class="suggestions hidden"></div>
+                </div>
+
+                <!-- Recommendations Display -->
+                <div id="recommendationsSection" class="recommendations-section hidden">
+                    <h3 id="recommendationsTitle"></h3>
+                    <div id="recommendationsGrid" class="recommendations-grid"></div>
+                </div>
+            </div>
+
+            <!-- History Tab -->
+            <div id="historyTab" class="tab-content">
+                <div class="history-container">
+                    <h3>Your Movie History</h3>
+                    <div id="historyList" class="history-list">
+                        <p class="empty-state">No movies in your history yet. Start searching to build your collection!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+

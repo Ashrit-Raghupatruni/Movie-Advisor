@@ -1,0 +1,41 @@
+# Compiled executables
+*.exe
+*.o
+*.obj
+*.out
+*.a
+*.lib
+*.dll
+
+# Build directories
+output/
+build/
+dist/
+bin/
+
+# Database files (user data)
+database/
+*.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Server executable (if compiled)
+server.exe
+
